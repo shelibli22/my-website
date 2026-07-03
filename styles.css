@@ -1,0 +1,66 @@
+/* עיצוב בסיסי לדף[cite: 3] */
+body {
+    font-family: 'Heebo', Arial, sans-serif;
+    background-color: #ffffff;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+}
+
+/* עיצוב כותרת עליונה[cite: 3] */
+#main-header {
+    background-color: #4a90e2;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.container {
+    padding: 20px 40px;
+}
+
+.info-section {
+    margin-bottom: 30px;
+}
+
+/* עיצוב בסיסי לכותרות משנה[cite: 3] */
+h2 {
+    color: #4a90e2;
+    border-bottom: 2px solid #4a90e2;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* הגדרות גודל לתמונות כדי שלא יהיו ענקיות[cite: 4] */
+img {
+    width: 200px;
+    height: auto;
+    margin: 10px 0 20px 10px;
+    border: 1px solid #cccccc;
+}
+
+/* העתקה של עיצוב ה-hr מתוך ההנחיות לתרגיל הבית[cite: 1] */
+hr {
+    border: dotted #829191 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 40px auto;
+}
+
+/* שילוב חובה של אלמנטים רספונסיביים לפי דרישת התרגיל: Flexbox + Media Query[cite: 1, 2] */
+@media (min-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .info-section {
+        width: 45%;
+    }
+    
+    /* העלמת הקו המפריד כאשר התוכן מוצג זה לצד זה במסך גדול[cite: 2] */
+    hr {
+        display: none;
+    }
+}
